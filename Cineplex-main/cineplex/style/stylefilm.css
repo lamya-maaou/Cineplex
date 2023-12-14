@@ -1,0 +1,138 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .film-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .film-image {
+    flex-basis: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .film-image img {
+    max-width: 80%;
+    height: auto;
+  }
+  
+  .film-description {
+    flex-basis: 60%;
+    padding: 20px;
+    
+  }
+  
+  .film-description h1 {
+    margin-bottom: 20px;
+  }
+  
+  .film-description p {
+    margin-bottom: 10px;
+  }
+  .film-description h1{
+    text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #571546 0%,
+    #7a1710 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+      font-size: 100px;
+  }
+
+@keyframes textclip {
+  to {
+    background-position: 100% center;
+  }
+
+}
+
+:root {
+  --bg: #1a1e24;
+  --color: rgb(215, 59, 59);
+  --font: Montserrat, Roboto, Helvetica, Arial, sans-serif;
+}
+
+.wrapper {
+  padding: 1.5rem 0;
+  filter: url('#goo');
+}
+
+.button {
+  display: inline-block;
+  text-align: center;
+  background: var(--color);
+  color: var(--bg);
+  font-weight: bold;
+  padding: 1.18em 1.32em 1.03em;
+  line-height: 1;
+  border-radius: 1em;
+  position: relative;
+  min-width: 8.23em;
+  text-decoration: none;
+  font-family: var(--font);
+  font-size: 1.25rem;
+}
+
+.button:before,
+.button:after {
+  width: 4.4em;
+  height: 2.95em;
+  position: absolute;
+  content: "";
+  display: inline-block;
+  background: var(--color);
+  border-radius: 50%;
+  transition: transform 1s ease;
+  transform: scale(0);
+  z-index: -1;
+}
+
+.button:before {
+  top: -25%;
+  left: 20%;
+}
+
+.button:after {
+  bottom: -25%;
+  right: 20%;
+}
+
+.button:hover:before,
+.button:hover:after {
+  transform: none;
+}
+
+
+/* Demo styles */
+
+body {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--bg)
+}
+
+
